@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(37, 35, 26, 0.726);
+    overflow: hidden;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+section::before{
+    content: '';
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(240, 11, 11, 0.600);
+    clip-path: circle(65% at 100% -20%);
+
+}
+section::after{
+    content: '';
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgb(10, 250, 238);
+    clip-path: circle(35% at 0% 100%);
+    
+}
+.container{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    width:300px;
+    height:490px;
+    margin-bottom: -84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255,255,0.2);
+    box-shadow: rgba(0, 0,0, 0.2);
+    backdrop-filter: blur(15px);
+
+}
+.container .card .imgbx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0px 20px 0px;
+    transition: 0.5s ease-in-out;
+}
+.container .card .imgbx img{
+    max-width: 80%;
+}
+.container .card:hover .imgbx{
+    transform: translateY(-100px);
+}
+.container .card:hover .imgbx img{
+    transform: translate(-20px,-40px) scale(1.4) rotate(-25deg); 
+}
+.container .card .imgbx h2{
+    color:white;
+    font-weight: 600;
+
+}
+.container .card .content{
+    position: absolute;
+    bottom:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50deg);
+}
+.container .card .content .size,.container .card .content .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    
+}
+.container .card .content .size h3,.container .card .content .color h3{
+    color:white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .content .size span,.container .card .content .color span
+{
+    width: 24px;
+    height: 17px;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    color: black;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container .card .content .size span:hover{
+    background-color: rgba(16, 214, 26, 0.753);
+}
+.container .card .content .color span{
+    width:20x;
+    height: 20px;
+      background-color: red; 
+      border-radius: 40%;
+      border: 3px solid white;
+      cursor: pointer;
+      margin: 0px 5px;
+      box-sizing: border-box;
+}
+.container .card .content .color span:nth-child(2){
+    background-color: greenyellow;
+}
+.container .card .content .color span:nth-child(3){
+    background-color: blue;
+}
+.container .card .content .color span:nth-child(4){
+    background-color: pink;
+}
+.container .card .content a{
+    position: relative;
+    top:10px;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color: white;
+    letter-spacing: 1px;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
